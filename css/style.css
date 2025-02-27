@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-decoration: none;
+}
+/*start global variables*/
+:root {
+    --main-color: orange;
+    --main-transition: 0.3s;
+}
+/*end global variables*/
+body {
+    text-transform: capitalize;
+    font-family: "Roboto", serif;
+}
+.page {
+    background-image: url("../images/login-page.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.page::before {
+    position: absolute;
+    content: "";
+    height: inherit;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.container {
+    top: calc(100vh / 2);
+    transform: translateY(-50%);
+    border-radius: 10px;
+    opacity: 0.9;
+    gap: 20px;
+}
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+/*start welcome*/
+.container .welcome {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.container .welcome h1 {
+    font-size: 25px;
+}
+.container .welcome h1 span {
+    color: var(--main-color);
+    font-size: 50px;
+}
+.container .welcome p{
+    color: #777;
+    line-height: 1.7;
+}
+/*end welcome*/
+/*start login*/
+.container .login {
+    position: relative;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: -1px 1px 20px 0px #777;
+    margin: 20px;
+    padding: 10px 10px;
+}
+.container .login::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 75%;
+    background-color: transparent;
+    top: 18px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--main-color);
+}
+.container .login .details {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 10px;
+    transition: var(--main-transition);
+}
+.container .login .details:hover{
+   transform: translateX(30px);
+}
+.container .login .details h3 {
+    color: var(--main-color);
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.login .details .form {
+    padding: 0 10px;
+}
+.login .details .form div{
+    margin: 0 0 30px 0;
+}
+.login .details .form label {
+    color: #777;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.login .details .form input[type = "text"],
+.login .details .form input[type = "password"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #7777777c;
+}
+.login .details .form input[type = "text"]:focus,
+.login .details .form input[type = "password"]:focus {
+    border: transparent;
+}
+.login .details .form .checkbox {}
+.login .details .form .checkbox input[type = "checkbox"]{}
+.login .details .form .checkbox label{}
+.login .details .form .checkbox .forgot{
+    margin-left: 100px;
+}
+.login .details .form .submit {
+}
+.login .details .form input[type = "submit"] {
+    background-color: white;
+    margin: auto;
+    display: block;
+    color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+   transition: var(--main-transition);
+   border: 1px solid var(--main-color);
+   box-shadow: 0 0 0;
+}
+.login .details .form input[type = "submit"]:hover {
+    box-shadow: 0 0 17px var(--main-color);
+}
+/*end login*/
