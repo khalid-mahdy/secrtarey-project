@@ -107,7 +107,7 @@ ul {
     background-color:#5CB338;
 }
 .setting-box .setting-content ul li:nth-of-type(4)  {
-    background-color: #000000;
+    background-color: #f00612a4;
 }
 
 /*end setting-box*/
@@ -203,6 +203,7 @@ ul {
     color: #777;
     font-weight: bold;
     margin-top: 10px;
+    letter-spacing: 2px;
 }
 .login .details .form input[type = "text"],
 .login .details .form input[type = "password"] {
