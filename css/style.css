@@ -139,9 +139,16 @@ ul {
     color: var(--main-color);
     font-size: 50px;
 }
-.container .welcome p {
+.container .welcome .p-1 ,
+.container .welcome .p-2 ,
+.container .welcome .p-3 {
     color: #777;
     line-height: 1.7;
+    display: none;
+}
+.container .welcome .active {
+    display: block;
+    transition: var(--main-transition);
 }
 .container .welcome .links {
     border-top: 1px solid #77777749;
@@ -209,11 +216,13 @@ ul {
 .login .details .form input[type = "password"] {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #7777777c;
+    border-bottom: 1px solid #77777771;
+    outline: none;
 }
 .login .details .form input[type = "text"]:focus,
 .login .details .form input[type = "password"]:focus {
     border: transparent;
+    border-bottom: 1px solid #77777769;
 }
 .login .details .form .checkbox {}
 .login .details .form .checkbox input[type = "checkbox"]{}

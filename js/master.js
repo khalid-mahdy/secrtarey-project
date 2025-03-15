@@ -40,3 +40,41 @@ optionColor.forEach(function(li) {
     })
 });
 
+
+//change pargraph option in the login page p-1 , p-2 and p-3///////////////////////////
+
+//get the pragraph Elements//////
+let pargraphOption = document.querySelectorAll(".welcome p");
+let pargraphOne = document.querySelector(".p-1");
+let pargraphTwo = document.querySelector(".p-2");
+let pargraphThree = document.querySelector(".p-3");
+
+//create array contains prgraph Elements
+let pragraphArray = [pargraphOne , pargraphTwo , pargraphThree];
+console.log(pragraphArray);
+
+
+    //create index of pragraph Array elements
+
+    // while(index <) {
+    //     if (index > pragraphArray.length - 1)
+    //         index = 0;
+    let interval = 2000;
+    for (let index = 0; index < pragraphArray.length; index++) {
+        let prevIndex = (index - 1 + pragraphArray.length) % pragraphArray.length;
+            console.log(`current Index: ${index}`);
+            console.log(`prev Index: ${prevIndex}`);
+            console.log('---------------------');
+    setInterval(() => {
+        if (pragraphArray[prevIndex].classList.contains("active")) {
+            pragraphArray[prevIndex].classList.remove("active");
+        }
+        pragraphArray[index].classList.add("active");
+    },interval += 2000);
+
+
+        // setInterval(() => {
+        //     pragraphArray[index].classList.add("active")
+        // } , 2000)
+        // index += 1;
+    }
